@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Spotify Revenus Estimés",
+    "version": "1.0",
+    "description": "Affiche les revenus mensuels estimés des artistes directement sur Spotify Web",
+    
+    "permissions": [
+      "activeTab"
+    ],
+    
+    "content_scripts": [
+      {
+        "matches": ["*://open.spotify.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Spotify Revenus Estimés"
+    }
+  }
